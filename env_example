@@ -1,0 +1,11 @@
+# postgres/.env
+POSTGRES_VERSION=<12.6-alpine>
+POSTGRES_PASSWORD=<postgres_password>
+POSTGRES_USER=<postgres_username>
+POSTGRES_DB=<dbname>
+COMPOSE_PROJECT_NAME=<project_name>
+# pgadmin4/.env
+PGADMIN_DEFAULT_EMAIL=<user@email.com>
+PGADMIN_DEFAULT_PASSWORD=<pgadmin_password>
+# Replace all info inside < > to your own data and remove the < > signs.
+# Save the file with your changes to a file named .env

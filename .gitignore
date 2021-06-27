@@ -1,1 +1,3 @@
 .env
+# This command makes the .env file invisible to Git, so it is not uploaded when
+# you push your project to GitHub or another repository.
