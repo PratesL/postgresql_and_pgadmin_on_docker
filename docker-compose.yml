@@ -1,0 +1,43 @@
+# spring-boot-postgres-flyway/docker-compose.yml
+# Code from tutorial: <https://keepgrowing.in/tools/set-up-a-postgresql-database-with-docker/>
+version: "3.3"
+services:
+  postgres:
+    image: "postgres:${POSTGRES_VERSION}"
+    # official PostgreSQL Docker image
+    ports:
+      - "35432:5432"
+      # HOST:CONTAINER
+    volumes:
+      - postgres:/var/lib/postgresql/data
+      # host file system (/var/lib/docker/volumes/ on Linux) 
+      # on the container (/var/lib/postgresql/data)
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB}
+    networks:
+      - postgres-pgadmin-network
+
+  pgadmin4:
+    image: "dpage/pgadmin4:latest"
+    # pgadmin4 Docker image
+    ports:
+      - "5050:80"
+      # HOST:CONTAINER
+    # volumes:
+    #   - pgadmin4:/var/lib/pgadmin
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=${PGADMIN_DEFAULT_EMAIL}
+      - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_DEFAULT_PASSWORD}
+    networks:
+      - postgres-pgadmin-network
+    depends_on:
+      - postgres
+    
+networks:
+  postgres-pgadmin-network:
+    driver: bridge
+
+volumes:
+  postgres:
