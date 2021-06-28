@@ -1,4 +1,4 @@
-# Learning PostgreSQL <img src="file:///home/prates/Downloads/postgresql-logo.webp" alt="img" style="zoom:33%;" />
+# Learning PostgreSQL <img src="https://www.postgresql.org/media/img/about/press/elephant.png" alt="img" style="zoom:8%;" />
 
 Before learning PostgreSQL it is needed to install it. 
 
@@ -46,6 +46,6 @@ Use the port you have configured in the .yml file
 
 You should see a window like this:
 
-![image-20210627215429486](/home/prates/.config/Typora/typora-user-images/image-20210627215429486.png)
+<img src="https://www.pgadmin.org/static/COMPILED/assets/img/screenshots/pgadmin4-welcome-light.png" alt="img" style="zoom:35%;" />
 
 That's it!
