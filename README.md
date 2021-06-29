@@ -1,8 +1,9 @@
-# Learning PostgreSQL <img src="https://www.postgresql.org/media/img/about/press/elephant.png" alt="img" style="zoom:8%;" />
+# PostgreSQL and pgAdmin runing on Docker containers  
+<img src="postgres_pgadmin_docker.png" alt="PostgreSQL and pgAdmin on Docker" style="zoom:100%;" />
 
 Before learning PostgreSQL it is needed to install it. 
 
-I faced some problems when I tried to install PostgreSQL in Ubuntu 20.04, and this made me search for alternative ways.  
+I faced some problems installing PostgreSQL in Ubuntu 20.04, and this made me search for alternative ways.  
 I decided to create a Docker container with PostgreSQL and another container with PGAdmin4 to interact with the PostgreSQL databases. 
 
 ##### What are the requirements:
@@ -47,5 +48,7 @@ Use the port you have configured in the .yml file
 You should see a window like this:
 
 <img src="https://www.pgadmin.org/static/COMPILED/assets/img/screenshots/pgadmin4-welcome-light.png" alt="img" style="zoom:35%;" />
+
+You can interact with the PostgreSQL database using the PGAdmin interface, and none of them were installed in you system.
 
 That's it!
